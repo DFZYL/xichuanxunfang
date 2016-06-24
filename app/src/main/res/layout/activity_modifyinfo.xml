@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_modify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_spacing"
+            android:layout_marginRight="@dimen/padding_spacing"
+            android:layout_marginTop="@dimen/padding_spacing"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:padding="5dp"
+                android:background="@drawable/xx_input_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <com.weisen.xcxf.widget.CircleImageView
+                        android:id="@+id/iv_self_info"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"/>
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+            </FrameLayout>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/tv_upload"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:text="上传头像"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:id="@+id/modify_Name"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:paddingRight="10dp"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:id="@+id/infoheadtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="姓名"
+                    android:textSize="@dimen/textnormal" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@null"
+                    android:lines="1"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/regist_input_txtcolor"
+                    android:textSize="@dimen/textnormal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_Pos"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="@dimen/padding_spacing"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="性别"
+                    android:textSize="@dimen/textnormal" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1" >
+
+                    <RadioGroup
+                        android:id="@+id/gp_self_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_man"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bg_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:checked="true"
+                            android:text="男"
+                            android:textColor="@color/low_dark" />
+
+                        <RadioButton
+                            android:id="@+id/rb_woman"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bg_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="女"
+                            android:textColor="@color/low_dark" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modify_Phone"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:paddingRight="10dp"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="手机"
+                    android:textSize="@dimen/textnormal" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:inputType="phone"
+                    android:textColor="@color/regist_input_txtcolor"
+                    android:textSize="@dimen/textnormal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:paddingRight="10dp"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="邮箱"
+                    android:textSize="@dimen/textnormal" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/regist_input_txtcolor"
+                    android:textSize="@dimen/textnormal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:paddingRight="10dp"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="民族"
+                    android:textSize="@dimen/textnormal" />
+
+                <EditText
+                    android:id="@+id/et_nation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:text="汉"
+                    android:textColor="@color/regist_input_txtcolor"
+                    android:textSize="@dimen/textnormal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_address"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/xx_input_bg" >
+
+                <TextView
+                    android:id="@+id/infoAddresstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="地址"
+                    android:textSize="@dimen/textnormal" />
+
+                <TextView
+                    android:id="@+id/tv_addr"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:textSize="@dimen/textnormal" />
+
+                <ImageView
+                    android:id="@+id/myRight"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:src="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/xx_input_bg"
+                android:paddingRight="10dp"
+                android:minHeight="50dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:gravity="center"
+                    android:text="签名"
+                    android:textSize="@dimen/textnormal" />
+
+                <EditText
+                    android:id="@+id/et_sign"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/regist_input_txtcolor"
+                    android:textSize="@dimen/textnormal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

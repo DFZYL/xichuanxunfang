@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_bar_bg">#FFF8F8F8</color>
+    <color name="low_gray">#bfbfbf</color>
+    <color name="gray">#FFDCDCDC</color>
+    <color name="tv_black">#434343</color>
+    <color name="tv_hint_gray">#8f8f8f</color>
+    <color name="tv_gray">#a6a6a6</color>
+    <color name="alpha_dark">#77414141</color>
+    <color name="alpha_white">#AAFFFFFF</color>
+    <color name="low_dark">#FF434343</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#3684D7</color>
+    <color name="mblue">#333684D7</color>
+    <color name="black">#000000</color>
+    <color name="green">#00cc00</color>
+    <color name="mgreen">#4ef314</color>
+    <color name="transparent">#50000000</color>
+    <color name="transparentp">#00000000</color>
+    <color name="red">#ff0e0e</color>
+    <color name="mred">#f85d5d</color>
+    <color name="green1">#25c61c</color>
+    <color name="huise1">#3c3c3c</color>
+    <color name="blue1">#3e5eff</color>
+    <color name="huise">#676363</color>
+    <color name="albumback">#E1E0DE</color>
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="translucence">#506050</color>
+    <!-- tab页面字体色 -->
+    <color name="maintab_text_normal">#a1a1a0</color>
+    <color name="maintab_text_color">#9C9C9C</color>
+    <color name="maintab_text_selected_color">#0079ff</color>
+
+    <!-- 背景色 -->
+
+    <color name="comen_blue">#FF3F8FDF</color>
+    <color name="bg_color">#f4f4f8</color>
+    <color name="regist_text_color">#8e8e8e</color>
+    <color name="regist_input_txtcolor">#1a1a1a</color>
+    <!-- 登陆页 自动登录字色 -->
+    <color name="autoLogin_text_color">#5d9eef</color>
+    <color name="forgetpass_text_color">#0079ff</color>
+    <!-- 重置导航颜色 -->
+    <color name="nav_text_color">#e0e0e1</color>
+    <!-- 内部通知 -->
+    <color name="tongzhi_title_color">#323232</color>
+    <color name="tongzhi_con_color">#858585</color>
+    <color name="tongzhi_time_color">#ffacacac</color>
+    <color name="tongzhi_count_color">#4691ee</color>
+
+
+    <!-- 奇数行颜色 -->
+    <color name="even">#FFADD8E6</color>
+    <!-- 偶数行颜色 -->
+    <color name="border_color">#000000</color>
+    <color name="week_today">#0078ff</color>
+    <color name="week_name">#1FC2F3</color>
+    <color name="sunday_saturday_color">#fa4451</color>
+    <color name="date_background">#ffffff</color>
+    <color name="day_color">#000000</color>
+    <color name="inner_grid_color">#aaadb2</color>
+    <color name="prev_next_month_day_color">#AAAAAA</color>
+    <color name="text_color">#FFFF00</color>
+    <color name="recordremindtext_color">#000000</color>
+    <color name="current_day_color">#565656</color>
+    <color name="today_background_color">#FF0000</color>
+    <color name="today_color">#565656</color>
+    <color name="sunday_saturday_prev_next_month_day_color">#AAAAAA</color>
+    <color name="selectdeparment">#599cd5</color>
+    <color name="split_line_grey">#EBEBEB</color>
+    <color name="translate">#00000000</color>
+    <color name="blue_black">#3bac</color>
+    <color name="green_black">#549008</color>
+    <color name="a">#FFCC6600</color>
+    <color name="trailplay_blue">#3684D7</color>
+</resources>

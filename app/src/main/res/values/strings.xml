@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">淅川综治</string>
+    <string name="action_settings">Settings</string>
+    <string name="get">正在获取数据，请稍候……</string>
+    <string name="upload">正在提交数据，请稍候……</string>
+    <string name="noInternet">无网络，请检查网络设置</string>
+    <string name="httpError">抱歉，您的网络不给力啊，再试试吧</string>
+    <string name="httpNoData">抱歉，未获取到数据，请稍候重试</string>
+    <string name="getDataError">获取数据失败</string>
+    <string name="noMoreData">没有更多数据了</string>
+    <string name="noData">没有数据</string>
+    <string name="confirm">提交</string>
+    <string name="title_case_report">事件上报</string>
+    <string name="title_report_list">事件列表</string>
+    <string name="title_trail">我的位置</string>
+    <string name="title_message">我的消息</string>
+    <string name="title_self">个人中心</string>
+    <string name="title_selfinfo">个人资料</string>
+    <string name="title_update_pwd">修改密码</string>
+    <string name="title_record">录音</string>
+    <string name="title_recording">紧急求助</string>
+    
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string> 
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="limit_pwd">0123456789/*-+qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKLOP,.!@#$%_</string>
+	<string name="default_time">88:88:88</string>
+</resources>

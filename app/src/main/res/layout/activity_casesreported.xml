@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/report"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/casetop"
+        layout="@layout/title" />
+
+    <GridView
+        android:visibility="gone"
+        android:layout_below="@+id/casetop"
+        android:id="@+id/list"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:smoothScrollbar="false"
+        ></GridView>
+
+    <View
+        android:layout_below="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/xx_navline" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_below="@+id/casetop"
+        android:id="@+id/fl_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"/>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_below="@+id/list"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</RelativeLayout>

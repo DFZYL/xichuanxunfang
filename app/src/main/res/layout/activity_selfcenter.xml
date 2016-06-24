@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setsystemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="fill_parent"
+                android:layout_height="80dip"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:layout_marginRight="@dimen/padding_spacing"
+                android:layout_marginTop="@dimen/bottom_top"
+                android:background="@drawable/xx_input_bg" >
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/padding_spacing"
+                    android:src="@drawable/user_head" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dip"
+                    android:layout_toRightOf="@+id/iv_head"
+                    android:textColor="@color/maintab_text_color"
+                    android:textSize="@dimen/textnormal" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/padding_spacing"
+                    android:background="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:layout_marginRight="@dimen/padding_spacing"
+                android:layout_marginTop="@dimen/padding_spacing"
+                android:background="@drawable/xx_input_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_update_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="修改密码"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_report"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="事件上报"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_trafficStats"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="流量统计"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:id="@+id/icon_trafficStats"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" 
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_offlinemap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="离线地图"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow"/>
+                </RelativeLayout>
+                
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+                
+                <RelativeLayout
+                    android:id="@+id/rl_update_data"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="更新数据"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    <ImageView
+                        android:id="@+id/icon_updatacase"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow"/>
+                </RelativeLayout>
+                
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_update_version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="版本更新"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_new_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="V1.0.0"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/icon_updata"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_version"
+                        android:src="@drawable/new_new3" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="上报时间段"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:paddingRight="@dimen/padding_spacing"
+                        android:text="08:00-20:00"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_period"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="自动上报时间"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:paddingRight="40dp"
+                        android:text="1分钟"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:background="@drawable/right_arrow" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_question"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="问题反馈"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:background="@drawable/right_arrow"/>
+               </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_delete_data"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="清除历史轨迹"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:background="@drawable/right_arrow"/>
+               </RelativeLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_start_service"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="重启服务"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+                    
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:background="@drawable/right_arrow"/>
+               </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@drawable/xx_navline" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_spacing"
+                        android:text="关于我们"
+                        android:textColor="@color/maintab_text_color"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/padding_spacing"
+                        android:background="@drawable/right_arrow"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginBottom="@dimen/padding_spacing"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:layout_marginRight="@dimen/padding_spacing"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/loginbtn_selector1"
+                android:padding="0dip"
+                android:text="退出当前账号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/edit_size" >
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/common_top_bg"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/return_before_normal"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="系统状态"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:textColor="@color/comen_blue"
+            android:layout_weight="1"
+            android:id="@+id/btn1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:text="未上传(2)" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/btn2"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColor="#000"
+            android:text="已上传(10)" />
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textColor="#000"
+            android:text="本地数据(12)" />
+        <!-- 
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="清除" />   -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_msg"
+        android:padding="5dp"
+        android:layout_marginTop="92dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/mblue"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/gps_status"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:gravity="left"
+
+                android:layout_height="wrap_content"
+                android:text="GPS:开"
+                android:textColor="#000"
+                android:layout_width="0dp" />
+
+            <TextView
+                android:id="@+id/mobile_status"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="#000"
+
+                android:layout_height="wrap_content"
+                android:text="MOB:开"
+                android:layout_width="0dp" />
+            <TextView
+                android:id="@+id/wifi_status"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="WIFI:开"
+                android:textColor="#000"
+                android:layout_width="0dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:gravity="left"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/is_move"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content"
+                android:text="状态:移动"
+                android:textColor="#000"
+                android:layout_width="0dp" />
+
+            <TextView
+                android:gravity="left"
+                android:layout_weight="1"
+                android:id="@+id/count"
+
+                android:layout_height="wrap_content"
+                android:text="成功:2"
+                android:textColor="#000"
+                android:layout_width="0dp" />
+
+                        <TextView
+                            android:gravity="left"
+                android:id="@+id/time_clock"
+                android:layout_weight="1"
+
+                android:layout_height="wrap_content"
+                android:text="获取：等待"
+                            android:textColor="#000"
+                            android:layout_width="0dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/is_getting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GPS正在获取数据中........."
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/data_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/data"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="经度:....维度....地址....精度....时间....."
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="4dp"
+    android:layout_below="@+id/status_msg"
+    android:id="@+id/line"
+    android:background="@color/split_line_grey"/>
+
+
+    <ListView
+        android:layout_below="@+id/line"
+        android:id="@+id/lv_report"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="1dp"
+        android:scrollbars="none"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

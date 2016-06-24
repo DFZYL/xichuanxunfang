@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="edit_width">280dip</dimen>
+  <dimen name="edit_size">18sp</dimen>
+  <dimen name="bottom_top">20dip</dimen>
+  <dimen name="bottom_bot">20dip</dimen>
+ 
+  <dimen name="edit_smallsize">14sp</dimen>
+  <dimen name="padding_spacing">10dip</dimen>
+  <dimen name="title_height">60dip</dimen>
+  <!-- tab 字体 -->
+  <dimen name="tabTextSize">18sp</dimen>
+  <!-- title 字体 -->
+  <dimen name="titleTextSize">18sp</dimen>
+  <!-- 普通字体 -->
+  <dimen name="textnormal">16sp</dimen>
+  <!-- 注册页 行图标 -->
+   <dimen name="top_top">40dip</dimen>
+   <dimen name="regist_left">30dip</dimen>
+   <!-- 手势解锁 -->   
+  <dimen name="ninePoint_top">50dip</dimen>
+  <!--考勤登记打卡刷新按钮宽度 -->
+  <dimen name="kq_daka_wd">200dip</dimen>
+  <dimen name="kq_frush">80dip</dimen>
+</resources>

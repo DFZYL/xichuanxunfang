@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+        android:id="@+id/ws_head"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/common_top_bg" >
+
+        <Button
+            android:id="@+id/backLiuLiang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/return_before_normal" />
+
+        <TextView
+            android:id="@+id/title_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="流量统计"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_spacing"
+        android:layout_marginRight="@dimen/padding_spacing"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xx_input_bg" >
+
+            <ImageView
+                android:id="@+id/ll_ic"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:src="@drawable/liuliang" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:layout_toRightOf="@+id/ll_ic"
+                android:text="今日数据"
+                android:textColor="@color/regist_input_txtcolor"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+
+  
+    　
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/xx_input_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/bottom_top"
+                android:text="已上传"
+                android:textColor="@color/regist_text_color"
+                android:textSize="@dimen/textnormal" />
+
+            <TextView
+                android:id="@+id/locationData1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/bottom_top"
+                android:textColor="@color/tongzhi_count_color"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+
+    　
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/xx_input_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/bottom_top"
+                android:text="未上传"
+                android:textColor="@color/regist_text_color"
+                android:textSize="@dimen/textnormal" />
+
+            <TextView
+                android:id="@+id/locationData2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/bottom_top"
+                android:textColor="@color/tongzhi_count_color"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+
+  
+   　
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/xx_input_bg" >
+
+            <ImageView
+                android:id="@+id/ll_icon"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:src="@drawable/xx_tj_gprs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/padding_spacing"
+                android:layout_toRightOf="@+id/ll_icon"
+                android:text="2g/3g流量"
+                android:textColor="@color/regist_input_txtcolor"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+
+  
+    　
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/xx_input_bg" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/bottom_top"
+                android:text="今日"
+                android:textColor="@color/regist_text_color"
+                android:textSize="@dimen/textnormal" />
+
+            <TextView
+                android:id="@+id/todayGP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/bottom_top"
+                android:text="0KB"
+                android:textColor="@color/tongzhi_count_color"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+
+    　
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/xx_input_bg" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/bottom_top"
+                android:text="本月"
+                android:textColor="@color/regist_text_color"
+                android:textSize="@dimen/textnormal" />
+
+            <TextView
+                android:id="@+id/monthGP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/bottom_top"
+                android:text="0KB"
+                android:textColor="@color/tongzhi_count_color"
+                android:textSize="@dimen/textnormal" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

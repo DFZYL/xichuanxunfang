@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="edit_width">280dip</dimen>
+  <dimen name="edit_size">18sp</dimen>
+  <dimen name="bottom_top">20dip</dimen>
+  <dimen name="bottom_bot">20dip</dimen>
+ 
+  <dimen name="edit_smallsize">14sp</dimen>
+  <dimen name="padding_spacing">10dip</dimen>
+  <dimen name="title_height">50dip</dimen>
+  
+  <!-- tab 字体 -->
+  <dimen name="tabTextSize">18sp</dimen>
+  <!-- title 字体 -->
+  <dimen name="titleTextSize">20sp</dimen>
+   <!-- 普通字体 -->
+  <dimen name="textnormal">16sp</dimen>
+  <!-- 注册页 行图标 -->
+    <!-- 注册页 行图标 -->
+  <dimen name="top_top">40dip</dimen>
+  <dimen name="regist_left">30dip</dimen>
+  <dimen name="button_wdith">160dip</dimen>
+  <dimen name="button_height">50dip</dimen>
+  <dimen name="button_wdith2">70dip</dimen>
+  <dimen name="yanBtn_wdith">235dip</dimen>
+
+</resources>

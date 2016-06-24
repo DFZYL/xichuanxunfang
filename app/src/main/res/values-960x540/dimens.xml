@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="edit_width">280dip</dimen>
+  <dimen name="edit_size">18sp</dimen>
+  <dimen name="bottom_top">20dip</dimen>
+  <dimen name="bottom_bot">20dip</dimen>
+ 
+  <dimen name="edit_smallsize">14sp</dimen>
+  <dimen name="padding_spacing">10dip</dimen>
+  <dimen name="title_height">50dip</dimen>
+  <!-- tab 字体 -->
+  <dimen name="tabTextSize">18sp</dimen>
+  <!-- title 字体 -->
+  <dimen name="titleTextSize">20sp</dimen>
+  <!-- 普通字体 -->
+  <dimen name="textnormal">16sp</dimen>
+  <!-- 注册页 行图标 -->
+  <dimen name="top_top">40dip</dimen>
+  <dimen name="regist_left">30dip</dimen>
+  <dimen name="button_wdith">150dip</dimen>
+  <dimen name="button_height">50dip</dimen>
+  <dimen name="button_wdith2">70dip</dimen>
+  <dimen name="yanBtn_wdith">230dip</dimen>
+  <!-- 重置密码 -->
+  <dimen name="yanEdit_wdith">230dip</dimen>
+  <dimen name="yanBtn_wd">95dip</dimen>
+     <!-- 手势解锁 -->   
+  <dimen name="ninePoint_top">80dip</dimen>
+  <!-- 应用页面 -->
+  <dimen name="grid_item_ic">60dip</dimen>
+  <dimen name="icon_width_height">60dip</dimen>
+   <dimen name="grid_item_wh">80dip</dimen>
+   <!-- 通讯助理 竖线右间距离 -->
+  <dimen name="zhuli_right">20dip</dimen>
+   <!-- 应用页图标大小 -->
+  <dimen name="shan_width_height">25dip</dimen>
+    <!-- 内部通知_发布人宽度 -->
+  <dimen name="tongzhi_user_width">100dip</dimen>
+  
+   <!-- 通知详情左右边距 -->
+  <dimen name="filedetails_left_right">20dip</dimen>
+  <dimen name="filedetails_padding">10dip</dimen>
+  <!-- 客户联系人单位资料 框宽 -->
+  <dimen name="lianxiren_width">300dip</dimen>
+  <!-- 工作提醒 -->
+  <dimen name="gztx_height">130dip</dimen>
+  <!-- 关于ws高度 -->
+  <dimen name="ws_height">250dip</dimen>
+   <!--考勤登记打卡刷新按钮宽度 -->
+  <dimen name="kq_daka_wd">210dip</dimen>
+  <dimen name="kq_frush">90dip</dimen>
+  <!--考勤导航宽度 -->
+  <dimen name="kq_nav_wd">20dip</dimen>
+  <dimen name="kq_nav_wd2">30dip</dimen>
+</resources>

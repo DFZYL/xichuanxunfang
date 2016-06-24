@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_bot"
+        android:gravity="center"
+        android:text="服务器设置"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titleTextSize" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="@dimen/padding_spacing"
+        android:layout_marginRight="@dimen/padding_spacing"
+        android:layout_marginTop="@dimen/padding_spacing"
+        android:background="@drawable/xx_navline" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_spacing"
+            android:layout_marginRight="@dimen/padding_spacing"
+            android:layout_marginTop="@dimen/bottom_bot" >
+
+            <EditText
+                android:id="@+id/et_ip"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/padding_spacing"
+                android:background="@drawable/xx_input_bg"
+                android:hint="请设置服务器地址"
+                android:paddingLeft="@dimen/padding_spacing"
+                android:textColor="@color/blue" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="@dimen/padding_spacing"
+        android:layout_marginRight="@dimen/padding_spacing"
+        android:layout_marginTop="@dimen/bottom_bot"
+        android:background="@drawable/xx_navline_blue" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_spacing"
+        android:layout_marginTop="20dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/bt_default"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/xx_regist_btn"
+            android:text="默认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Button
+            android:id="@+id/bt_confirm"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/xx_regist_btn"
+            android:text="修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/xx_regist_btn"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+
+</LinearLayout>
