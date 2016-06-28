@@ -1,18 +1,5 @@
 package com.weisen.xcxf.activity;
 
-import java.io.File;
-import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
-import org.apache.http.Header;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -24,14 +11,10 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
-import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.provider.ContactsContract;
-import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -84,6 +67,17 @@ import com.weisen.xcxf.tool.TimeCount;
 import com.weisen.xcxf.tool.UnIntent;
 import com.weisen.xcxf.utils.IntenetUtil;
 
+import org.apache.http.Header;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class TrailActivity extends BaseActivity implements OnClickListener {
     private String WORKPIC,UNWORKPIC;
     private TextView tv_trail;
@@ -125,6 +119,8 @@ public class TrailActivity extends BaseActivity implements OnClickListener {
     private String time;
     private SharedPreferences sp;
     boolean isWork;
+    private Boolean isWeixing=false;
+    private ImageView weixing;
     @Override
     protected void initView() {
 
@@ -151,6 +147,25 @@ public class TrailActivity extends BaseActivity implements OnClickListener {
         btn_left.setOnClickListener(this);
         img_right = (ImageView) findViewById(R.id.img_right);
         img_right.setOnClickListener(this);
+        weixing=(ImageView)findViewById(R.id.image_weixing);
+        weixing.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if(isWeixing)
+                {
+                    mMapView.getMap().setMapType(BaiduMap.MAP_TYPE_NORMAL);
+                    isWeixing=false;
+                    weixing.setImageResource(R.drawable.map_weixing);
+                }
+                else {
+                    isWeixing=true;
+                    mMapView.getMap().setMapType(BaiduMap.MAP_TYPE_SATELLITE);
+                    weixing.setImageResource(R.drawable.map_pingmian);
+                }
+            }
+        });
         tv_title = (TextView) findViewById(R.id.tv_title);
         if(isWork){
 
@@ -253,7 +268,7 @@ public class TrailActivity extends BaseActivity implements OnClickListener {
             {
                    btn_left.setEnabled(true);
              //   Toast.makeText(TrailActivity.this, "拍照成功", Toast.LENGTH_SHORT).show();
-                WORKPIC=Bimp.compressBitmap(photoPath,600,600,true,"work");
+                WORKPIC= Bimp.compressBitmap(photoPath,600,600,true,"work");
 //                showWorkDialog();
 
             }

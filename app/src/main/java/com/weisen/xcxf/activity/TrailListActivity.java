@@ -42,7 +42,7 @@ public class TrailListActivity extends BaseActivity implements OnClickListener {
     private String isMoved = "状态:移动";
     private SensorManager mSensorManager;// 传感器服务
     private StepDetector detector;// 传感器监听对象
-
+private  int success;
     @Override
     protected void initView() {
         setContentView(R.layout.activity_trail_list);
@@ -150,6 +150,8 @@ public class TrailListActivity extends BaseActivity implements OnClickListener {
             if (intent.getAction().equals(Constant.UPDATEUPDATELOCATIONTYPE)) {
                 dataStr = intent.getStringExtra("date");
                 mCount = intent.getIntExtra("count", 200);
+                success=intent.getIntExtra("susscess",0);
+
                 isMoved = intent.getStringExtra("isMoved");
                 updateView();
             }
@@ -182,6 +184,8 @@ public class TrailListActivity extends BaseActivity implements OnClickListener {
     }
 
     private void updateView() {
+
+
         if (mCount == 0) {
             time_clock.setText("获取:等待");
         } else {
@@ -226,7 +230,9 @@ public class TrailListActivity extends BaseActivity implements OnClickListener {
 
     move.setText(isMoved);
     count.setText("成功:"+(myLocationDao.getUnUploadCount(uid)+myLocationDao.getCount(uid)));
-    isGetting.setText(dataStr);
+//    count.setText("成功"+success);
+
+        isGetting.setText(dataStr);
     dataFrom.setText(dataFromStr);
     data.setText(locationStr);
     time.setText(timeStr);

@@ -27,7 +27,6 @@ import android.os.Build.VERSION;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
@@ -62,7 +61,6 @@ import org.apache.http.Header;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.text.DecimalFormat;
@@ -154,8 +152,8 @@ public class MyLocationService extends Service {
     BatteryReceiver batteryReceiver;
     @Override
     public void onCreate() {
-        lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         super.onCreate();
+        lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         IntentFilter filter = new IntentFilter(Intent.ACTION_TIME_TICK);
         receiver = new MyBroadcastReceiver();
         registerReceiver(receiver, filter);
@@ -224,7 +222,7 @@ public class MyLocationService extends Service {
         builder.setTicker("淅川综治");
         builder.setContentTitle("淅川综治");
 //        if(MyApplication.isWork)
-            String status=MyApplication.getInstance().getIsWork()?"工作中":"休息中";
+            String status= MyApplication.getInstance().getIsWork()?"工作中":"休息中";
 
         long day = systemtime/(24*60);
        long  hour = (systemtime%(24*60))/60;
@@ -254,7 +252,8 @@ public class MyLocationService extends Service {
             }
         }
        // return super.onStartCommand(intent, flags, startId);
-        return START_STICKY;
+        return super.onStartCommand(intent, Service.START_STICKY, startId);
+
     }
 
     private AlarmReceiver alarmReceiver;
@@ -288,6 +287,7 @@ public class MyLocationService extends Service {
                         Intent i = new Intent(Constant.UPDATEUPDATELOCATIONTYPE);
                         i.putExtra("date", "百度获取位置中.....");
                         i.putExtra("count", distance);
+                        i.putExtra("susscess",count);
                         i.putExtra("isMoved", "状态:移动");
                         preferences.edit().putString(Constant.SP_PERIOD, periodTime + "").commit();
                         sendBroadcast(i);
@@ -335,7 +335,7 @@ public class MyLocationService extends Service {
          * 位置信息变化时触发
          */
         public void onLocationChanged(Location gpsLocation) {
-            count++;
+
             accuracy = (int) gpsLocation.getAccuracy();
             isFristBaidu = true;
             location = gpsLocation;
@@ -528,7 +528,7 @@ public class MyLocationService extends Service {
     public class MyLocationListener implements BDLocationListener {
 
         public void onReceiveLocation(BDLocation bd) {
-            count++;
+
             locationClient.stop();
             if (bd != null && bd.hasAddr()) {
                 latitude = bd.getLatitude();
@@ -561,6 +561,7 @@ public class MyLocationService extends Service {
                     Intent intent = new Intent(Constant.UPDATEUPDATELOCATIONTYPE);
                     intent.putExtra("date", "GPS获取位置中...");
                     intent.putExtra("count", distance);
+                    i.putExtra("susscess",count);
                     if (detector.isMoved){
                         intent.putExtra("isMoved", "状态:移动");}
                     else {
@@ -572,6 +573,7 @@ public class MyLocationService extends Service {
                     Intent intent = new Intent(Constant.UPDATEUPDATELOCATIONTYPE);
                     intent.putExtra("date", "网络获取位置中...");
                     intent.putExtra("count", distance);
+                    i.putExtra("susscess",count);
                     if (detector.isMoved){
                     intent.putExtra("isMoved", "状态:移动");}
                     else {
@@ -632,6 +634,7 @@ public class MyLocationService extends Service {
                     gpslocationListener);
             i.putExtra("date", "GPS获取位置中...");
             i.putExtra("count", distance);
+            i.putExtra("susscess",count);
             if (detector.isMoved){
                 i.putExtra("isMoved", "状态:移动");}
             else {
@@ -704,6 +707,8 @@ public class MyLocationService extends Service {
            if (cur.after(beginDate) && cur.before(endDate)) {
                 if (time == null || time.equals(""))
                     time = CommonTool.getStringDate(cur, "yyyy-MM-dd HH:mm:ss");
+
+                 count++;
                 MyLocation mlocation = new MyLocation();
                 mlocation.setNet(IntenetUtil.getNetworkState(MyLocationService.this)+"");
                 mlocation.setUid(userId);
@@ -718,15 +723,28 @@ public class MyLocationService extends Service {
                 mlocation.setLocType(locType);
                 mlocation.setTime(time);
 
-                if (lastUploadLatLng != null) {
-                    double distance = DistanceUtil.getDistance(new LatLng(latitude, longitude), lastUploadLatLng);
-                    if (distance > 1000000) {
-                        lastUploadLatLng = new LatLng(latitude, longitude);
-//                        showToast("非正常数据!");
-                        return;
-                    }
-                }
-                lastUploadLatLng = new LatLng(latitude, longitude);
+
+               if (lastlocation != null) {
+                   int distance = (int) DistanceUtil.getDistance(new LatLng(latitude, longitude),
+                           new LatLng(Double.parseDouble(lastlocation.getLatitude()), Double.parseDouble(lastlocation.getLatitude())));
+                   Date lastTime = CommonTool.getDate(lastlocation.getTime(), "yyyy-MM-dd HH:mm:ss");
+                   Date currentTime = CommonTool.getDate(mlocation.getTime(), "yyyy-MM-dd HH:mm:ss");
+                   long diff = lastTime.getTime() - currentTime.getTime();
+                   int speed = (int) (distance / (diff / 1000));
+                   Log.i(TAG, "saveLocation: 距离" + distance + "时间" + diff);
+                   if (speed > 200) {
+                       return;
+                   }
+               }
+
+
+
+
+
+               lastlocation=mlocation;
+
+
+
                 long match = locationDao.getMatchCount(userId,latitude+"",longitude+"");
                 if(match!=0){
 //
@@ -774,9 +792,9 @@ public class MyLocationService extends Service {
     }
 
 
-    LatLng lastUploadLatLng;
 
 
+    MyLocation lastlocation;
 
 
     // 请求服务器
@@ -947,15 +965,13 @@ public class MyLocationService extends Service {
         systemtime=0;
         count=0;
         releaseWakeLock();
-        userId = "";
+
         if (receiver != null)
             unregisterReceiver(receiver);
         if (alarmReceiver != null) {
             unregisterReceiver(alarmReceiver);
         }
-//        if (am != null) {
-//            am.cancel(sender);
-//        }
+
         if (batteryReceiver != null) {
             unregisterReceiver(batteryReceiver);
         }
@@ -963,6 +979,12 @@ public class MyLocationService extends Service {
         if (lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             lm.removeUpdates(gpslocationListener);
         }
+
+//        if(MyApplication.getInstance().getServiceOpen()&&!MyApplication.getInstance().getUserId().equals(""))
+//        {
+//
+//          startService(new Intent( MyLocationService.this,MyLocationService.class));
+//        }
 
     }
 

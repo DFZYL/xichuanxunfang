@@ -130,7 +130,7 @@
         android:layout_height="0.5dp"
         android:background="#C2C2C2" />
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/ll_map"
         android:layout_width="match_parent"
         android:layout_height="fill_parent" >
@@ -140,6 +140,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:clickable="true" />
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/image_weixing"
+            android:layout_marginTop="@dimen/ui_10_dip"
+            android:layout_marginRight="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/map_weixing"
+            android:padding="3dp"
+            android:background="@color/blue"
+            android:layout_gravity="right|top"/>
+    </FrameLayout>
 
 </LinearLayout>

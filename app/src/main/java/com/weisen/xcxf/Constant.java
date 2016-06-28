@@ -70,9 +70,9 @@ public class Constant {
     public static final String GETLOACTIONACTION = "getLoactionAction";
 	// I
 
-    public static final String IP = "http://211.142.152.179:88/xcxf/";//实际地址
+//    public static final String IP = "http://211.142.152.179:88/xcxf/";//实际地址
 
-//	public static final String IP = "http://117.158.67.11:82/xcxf/";//测试地址/
+	public static final String IP = "http://117.158.67.11:82/xcxf/";//测试地址/
 
 
 

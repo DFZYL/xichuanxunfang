@@ -52,6 +52,8 @@ dependencies {
     compile files('libs/baidumapapi_cloud_v3_7_1.jar')
     compile files('libs/BaiduNaviSDK_3.1.0.jar')
     compile files('libs/httpmime-4.1.2.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+
     compile files('libs/oneapm-android-agent.jar')
     compile files('libs/afinal_0.5.1_bin.jar')
 }
